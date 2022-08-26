@@ -35,8 +35,8 @@
 LY-CoV1404_BA2:
   conditions:
     LY-CoV1404_119: LY-CoV1404 - BA2
-  plot_auto_identified_sites: default
-  add_sites: []
+  plot_auto_identified_sites: false
+  add_sites: [349, 439, 441, 443, 444, 445, 446, 447, 448, 450, 464, 494, 496, 499, 500]
   exclude_sites: []
   site_color_scheme: barnes_serum_epitopes
   color_by_dms: True
