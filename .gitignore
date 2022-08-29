@@ -26,7 +26,7 @@ results/counts/*
 
 !results/escape_scores
 results/escape_scores/*
-!results/escape_scores/scores.csv
+!results/escape_scores/scores_*.csv
 !results/escape_scores/escape_fracs.csv
 
 !results/supp_data/
