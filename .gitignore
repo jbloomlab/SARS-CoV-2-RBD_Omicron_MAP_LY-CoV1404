@@ -19,19 +19,29 @@ results/*
 results/variants/*
 !results/variants/codon_variant_table.csv
 
-!resuts/counts
+!results/counts
 results/counts/*
-!results/counts/variant_counts.csv.gz
-!results/counts/counts_to_cells_csv.csv
+!results/counts/*/variant_counts.csv.gz
+!results/counts/*/counts_to_cells_csv.csv
 
 !results/escape_scores
 results/escape_scores/*
 !results/escape_scores/scores_*.csv
 !results/escape_scores/escape_fracs.csv
 
-!results/supp_data/
-results/supp_data/*
-!results/supp_data/*.csv
+!results/supp_data
+results/escape_scores/*
+!results/supp_data/Wuhan_Hu_1/
+results/supp_data/Wuhan_Hu_1/*
+!results/supp_data/Wuhan_Hu_1/*.csv
+
+!results/supp_data/Omicron_BA1/
+results/supp_data/Omicron_BA1/*
+!results/supp_data/Omicron_BA1/*.csv
+
+!results/supp_data/Omicron_BA2/
+results/supp_data/Omicron_BA2/*
+!results/supp_data/Omicron_BA2/*.csv
 
 !results/prior_DMS_data/
 results/prior_DMS_data/*
