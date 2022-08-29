@@ -21,8 +21,20 @@ results/variants/*
 
 !results/counts
 results/counts/*
-!results/counts/*/variant_counts.csv.gz
-!results/counts/*/counts_to_cells_csv.csv
+!results/counts/Wuhan_Hu_1/
+results/counts/Wuhan_Hu_1/*
+!results/counts/Wuhan_Hu_1/variant_counts.csv.gz
+!results/counts/Wuhan_Hu_1/counts_to_cells_csv.csv
+
+!results/counts/Omicron_BA1/
+results/counts/Omicron_BA1/*
+!results/counts/Omicron_BA1/variant_counts.csv.gz
+!results/counts/Omicron_BA1/counts_to_cells_csv.csv
+
+!results/counts/Omicron_BA2/
+results/counts/Omicron_BA2/*
+!results/counts/Omicron_BA2/variant_counts.csv.gz
+!results/counts/Omicron_BA2/counts_to_cells_csv.csv
 
 !results/escape_scores
 results/escape_scores/*

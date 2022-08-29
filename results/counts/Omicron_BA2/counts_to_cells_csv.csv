@@ -1,0 +1,5 @@
+sample_lib,date,experiment,antibody,concentration,sort_bin,number_cells,counts,counts:cells,is_reference
+"exptREF-none-0-ref, lib24",220816,exptREF,none,0,ref,,6.97e+07,,True
+"exptREF-none-0-ref, lib25",220816,exptREF,none,0,ref,,3.34e+07,,True
+"expt9-LY-CoV1404-119-abneg, lib24",220816,expt9,LY-CoV1404,119,abneg,6.36e+05,3.56e+06,5.59,False
+"expt9-LY-CoV1404-119-abneg, lib25",220816,expt9,LY-CoV1404,119,abneg,6.22e+05,3.82e+06,6.13,False
