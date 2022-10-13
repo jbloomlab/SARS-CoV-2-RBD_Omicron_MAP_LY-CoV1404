@@ -54,7 +54,7 @@ with open(config['output_pdbs_config']) as f:
     output_pdbs_config = yaml.safe_load(f)
 ```
 
-    Reading PDB output configuration from data/output_pdbs_config.yaml
+    Reading PDB output configuration from data/output_pdbs_config_Wuhan_Hu_1.yaml
 
 
 Make output directory:

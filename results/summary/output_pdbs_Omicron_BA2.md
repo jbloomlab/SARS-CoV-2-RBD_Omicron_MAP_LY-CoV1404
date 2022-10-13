@@ -49,12 +49,12 @@ Read configuration for outputting PDBs:
 
 
 ```python
-print(f"Reading PDB output configuration from {config['output_pdbs_config']}")
-with open(config['output_pdbs_config']) as f:
+print(f"Reading PDB output configuration from {config['output_pdbs_config_BA2']}")
+with open(config['output_pdbs_config_BA2']) as f:
     output_pdbs_config = yaml.safe_load(f)
 ```
 
-    Reading PDB output configuration from data/output_pdbs_config.yaml
+    Reading PDB output configuration from data/output_pdbs_config_Omicron_BA2.yaml
 
 
 Make output directory:
@@ -210,14 +210,14 @@ for name, specs in output_pdbs_config.items():
 ```
 
     
-    Making PDB mappings for 6m0j to data/pdbs/6M0J.pdb
+    Making PDB mappings for 7xb0 to data/pdbs/7xb0_BA2.pdb
     Making mappings for 1 conditions.
-    Mapping to the following chains: E
+    Mapping to the following chains: B
       Writing B-factor re-assigned PDBs for LY-CoV1404_119 to:
-        results/pdb_outputs/Omicron_BA2/LY-CoV1404_119_6m0j_total_escape.pdb
-        results/pdb_outputs/Omicron_BA2/LY-CoV1404_119_6m0j_max_escape.pdb
-        results/pdb_outputs/Omicron_BA2/LY-CoV1404_119_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/Omicron_BA2/LY-CoV1404_119_6m0j_norm_max_escape.pdb
+        results/pdb_outputs/Omicron_BA2/LY-CoV1404_119_7xb0_total_escape.pdb
+        results/pdb_outputs/Omicron_BA2/LY-CoV1404_119_7xb0_max_escape.pdb
+        results/pdb_outputs/Omicron_BA2/LY-CoV1404_119_7xb0_norm_total_escape.pdb
+        results/pdb_outputs/Omicron_BA2/LY-CoV1404_119_7xb0_norm_max_escape.pdb
 
 
 

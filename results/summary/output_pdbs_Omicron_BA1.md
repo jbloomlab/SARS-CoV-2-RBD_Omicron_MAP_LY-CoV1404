@@ -49,12 +49,12 @@ Read configuration for outputting PDBs:
 
 
 ```python
-print(f"Reading PDB output configuration from {config['output_pdbs_config']}")
-with open(config['output_pdbs_config']) as f:
+print(f"Reading PDB output configuration from {config['output_pdbs_config_BA1']}")
+with open(config['output_pdbs_config_BA1']) as f:
     output_pdbs_config = yaml.safe_load(f)
 ```
 
-    Reading PDB output configuration from data/output_pdbs_config.yaml
+    Reading PDB output configuration from data/output_pdbs_config_Omicron_BA1.yaml
 
 
 Make output directory:
@@ -64,7 +64,7 @@ Make output directory:
 os.makedirs(config['pdb_outputs_dir_Omicron_BA1'], exist_ok=True)
 ```
 
-Read escape fractions and compute **total** and **maximum** escape at each site, and also the total and maximum escape at each site normalized to be between 0 and 1 for each selection:
+Read escape fractions and compute **total** and **maximum** escape at each site, and also the total and maximum escape at each site normalized to be between 0 and 1 for each selection. NOTE!!! I am subtracting 3 from each site numbering becasue this pdb appears to be in BA1 spike numbering instead of WH1:
 
 
 ```python
@@ -73,7 +73,7 @@ print(f"Reading escape fractions from {config['escape_fracs_Omicron_BA1']}")
 escape_fracs = (
     pd.read_csv(config['escape_fracs_Omicron_BA1'])
     .query('library == "average"')
-    .assign(site=lambda x: x['label_site'])
+    .assign(site=lambda x: x['label_site'] - config['site_number_offset_BA1_v_WH1'])
     .groupby(['selection', 'site'])
     .aggregate(total_escape=pd.NamedAgg(config['mut_metric'], 'sum'),
                max_escape=pd.NamedAgg(config['mut_metric'], 'max')
@@ -108,7 +108,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
   <tbody>
     <tr>
       <td>LY-CoV1404_83</td>
-      <td>331</td>
+      <td>328</td>
       <td>0.164598</td>
       <td>0.02958</td>
       <td>13.33786</td>
@@ -118,7 +118,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
     </tr>
     <tr>
       <td>LY-CoV1404_83</td>
-      <td>332</td>
+      <td>329</td>
       <td>0.227985</td>
       <td>0.02862</td>
       <td>13.33786</td>
@@ -128,7 +128,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
     </tr>
     <tr>
       <td>LY-CoV1404_83</td>
-      <td>333</td>
+      <td>330</td>
       <td>0.145690</td>
       <td>0.02406</td>
       <td>13.33786</td>
@@ -138,7 +138,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
     </tr>
     <tr>
       <td>LY-CoV1404_83</td>
-      <td>334</td>
+      <td>331</td>
       <td>0.296235</td>
       <td>0.05819</td>
       <td>13.33786</td>
@@ -148,7 +148,7 @@ display(HTML(escape_fracs.head().to_html(index=False)))
     </tr>
     <tr>
       <td>LY-CoV1404_83</td>
-      <td>335</td>
+      <td>332</td>
       <td>0.222477</td>
       <td>0.02263</td>
       <td>13.33786</td>
@@ -210,14 +210,14 @@ for name, specs in output_pdbs_config.items():
 ```
 
     
-    Making PDB mappings for 6m0j to data/pdbs/6M0J.pdb
+    Making PDB mappings for 7wpb to data/pdbs/7wpb_BA1.pdb
     Making mappings for 1 conditions.
-    Mapping to the following chains: E
+    Mapping to the following chains: A
       Writing B-factor re-assigned PDBs for LY-CoV1404_83 to:
-        results/pdb_outputs/Omicron_BA1/LY-CoV1404_83_6m0j_total_escape.pdb
-        results/pdb_outputs/Omicron_BA1/LY-CoV1404_83_6m0j_max_escape.pdb
-        results/pdb_outputs/Omicron_BA1/LY-CoV1404_83_6m0j_norm_total_escape.pdb
-        results/pdb_outputs/Omicron_BA1/LY-CoV1404_83_6m0j_norm_max_escape.pdb
+        results/pdb_outputs/Omicron_BA1/LY-CoV1404_83_7wpb_total_escape.pdb
+        results/pdb_outputs/Omicron_BA1/LY-CoV1404_83_7wpb_max_escape.pdb
+        results/pdb_outputs/Omicron_BA1/LY-CoV1404_83_7wpb_norm_total_escape.pdb
+        results/pdb_outputs/Omicron_BA1/LY-CoV1404_83_7wpb_norm_max_escape.pdb
 
 
 

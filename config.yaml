@@ -28,7 +28,8 @@ reference_min_counts: 2.5e+7
 wildtype_sequence_Wuhan_Hu_1: data/wildtype_sequence_Wuhan_Hu_1.fasta
 wildtype_sequence_Omicron_BA1: data/wildtype_sequence_Omicron_BA1.fasta
 wildtype_sequence_Omicron_BA2: data/wildtype_sequence_Omicron_BA2.fasta
-site_number_offset: 330  # add this to sequential sites to get RBD numbering
+site_number_offset: 330  # add this to sequential sites to get RBD numbering in WH1
+site_number_offset_BA1_v_WH1: 3 #subtract this from WH1 numbering to get BA1 numbering for 7wpb pdb
 
 # URLs from which we download binding & expression of mutants & variants
 mut_bind_expr_url: https://media.githubusercontent.com/media/jbloomlab/SARS-CoV-2-RBD_DMS_Omicron/main/results/final_variant_scores/final_variant_scores.csv
@@ -133,7 +134,9 @@ escape_profile_ymax:
   min_ymax: null
 
 # structural mappings configuration
-output_pdbs_config: data/output_pdbs_config.yaml
+output_pdbs_config: data/output_pdbs_config_Wuhan_Hu_1.yaml
+output_pdbs_config_BA1: data/output_pdbs_config_Omicron_BA1.yaml
+output_pdbs_config_BA2: data/output_pdbs_config_Omicron_BA2.yaml
 
 
 # output directories / files

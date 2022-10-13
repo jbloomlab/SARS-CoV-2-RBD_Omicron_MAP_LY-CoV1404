@@ -7,9 +7,10 @@
 #  conditions -> conditions (antibodies / sera) for which we write this PDB,
 #                set to ALL  for all conditions
 
-# 6m0j is ACE2 bound Wuhan-1 RBD
-6m0j:
-  pdbfile: data/pdbs/6M0J.pdb
+
+# 7xb0 is ACE2 bound BA.2 RBD
+7xb0:
+  pdbfile: data/pdbs/7xb0_BA2.pdb
   chains:
-    - E
+    - B
   conditions: ALL
