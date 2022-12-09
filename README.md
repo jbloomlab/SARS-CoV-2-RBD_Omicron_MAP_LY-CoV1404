@@ -1,7 +1,7 @@
 # Mutational antigenic profiling of LY-CoV1404 in the Omicron BA.1 background
 
 
-Study and analysis by Tyler Starr, Allie Greaney, [Jesse Bloom](https://research.fhcrc.org/bloom/en.html), and co-authors.
+Study and analysis by Tyler Starr, Allie Greaney, [Jesse Bloom](https://research.fhcrc.org/bloom/en.html), and co-authors. The preprint describing these experiments can be found [here](https://www.biorxiv.org/content/10.1101/2022.09.20.508745v1).
 
 
 ## Summary of workflow and results
